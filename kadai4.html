@@ -37,7 +37,11 @@
 
                     // 配列の内容を項目毎に出力
                     // 課題4-1. ここにコードを書く
+                    for(i of item_list){
+                        console.log("商品番号: "+i.id+", 商品名: "+i.name+", 金額: "+i.price+", 在庫数: "+i.stock)
+                    }
                     console.log(""); // 空行の出力
+
                 }
                 
                 // 商品購入の関数
@@ -65,7 +69,9 @@
             // 商品オブジェクトの生成
             for(i in items){
                 item_list[i] = new Item(items[i]["name"], items[i]["price"], items[i]["stock"])
+                console.log("id: "+item_list[i].id+", name: "+item_list[i].name+", "+item_list[i].price+"円, 残り"+item_list[i].stock+"個")
             }
+
             // 課題4-2. ここにコードを書く
             // 商品表の作成
 
